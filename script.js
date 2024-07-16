@@ -18,7 +18,12 @@ btn.addEventListener("click", () => {
     input.focus();
     for(const account of accountList){
         splitList = account.split(":");
-        console.log(`Username: ${splitList[0]} \nPassword: ${splitList[1]}`);
+        if(searchAccount === splitList[0]){
+            console.log(`Username: ${splitList[0]} \nPassword: ${splitList[1]}`);
+            break;
+        }else{
+            console.log("no account found");
+        }
     }
 
 
