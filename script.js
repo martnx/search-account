@@ -6,15 +6,20 @@ const accountList = [
     "angelo:angelo2002"];
 
 const para = document.querySelector("#para-display");
-const input = document.querySelector("input-search");
+const input = document.querySelector("#input-search");
 const btn = document.querySelector("#btn");
 const userDisplay = document.querySelector("#user-para");
 const passDisplay = document.querySelector("#pass-para");
 
-function test(){
-    console.log("the button is clicked");
-}
+btn.addEventListener("click", () => {
+    const searchAccount = input.value.toLowerCase();
+    console.log(searchAccount);
+    input.value = " ";
+    input.focus();
+    for(const account of accountList){
+        splitList = account.split(":");
+        console.log(`Username: ${splitList[0]} \nPassword: ${splitList[1]}`);
+    }
 
-btn.addEventListener("click", test);
 
-console.log("the button is clicked");
+});
