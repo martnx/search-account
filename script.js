@@ -11,8 +11,10 @@ const btn = document.querySelector("#btn");
 const userDisplay = document.querySelector("#user-para");
 const passDisplay = document.querySelector("#pass-para");
 
-btn.addEventListener("click", test);
-
 function test(){
     console.log("the button is clicked");
 }
+
+btn.addEventListener("click", test);
+
+console.log("the button is clicked");
